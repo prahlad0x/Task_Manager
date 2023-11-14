@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard 📑</title>
+    <link rel="stylesheet" href="/dist/silverBox.min.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="rightContainer">
+            <h1>📑 Task Manager</h1>
+            <br />
+            <br />
+            <h4>All Boards ( <span id="board_count"></span> )</h4>
+            <div id="all_boards">
+                <!-- all board button here -->
+            </div>
+            <div id="add_board_button">
+                <div onclick="showAddPopup()">+ Add Board</div>
+            </div>
+        </div>
+        <div class="leftContainer">
+            <div class="top-container">
+                <div class="board_name_del_cont">
+                    <h2 id="current_board_name">Board 1 </h2>
+                    <img class="delbtn" src="./images/delete-svgrepo-com.svg" alt="Delete board"
+                        onclick="delete_Board()">
+                </div>
+                <button id="Add_new_task_btn"> + Add New Task</button>
+            </div>
+            <div id="deepCont">
+                <div class="filter_container">
+                    <h5>Todo ( <span id="todo-count"></span> )</h5>
+                    <h5>Doing (<span id="doing-count"></span>)</h5>
+                    <h5>Done(<span id="done-count"></span>)</h5>
+                </div>
+                <div class="task_container">
+                    <!-- All tasks here -->
+                    
+                </div>
+            </div>
+        </div>
+        <div class="Add_task_form">
+           <div>
+            <div class="add_form_innerdiv" id="add_form_innerdiv">
+                <h2>Add New Task</h2>
+                <h1 onclick="remove_task_popup()">×</h1>
+            </div>
+            <div class="add_form_innerdiv">
+                <p>Task Name</p>
+                <input type="text" placeholder="Enter Task Name" class="new_task_nameInp">
+            </div>
+            <div class="add_form_innerdiv">
+                <p>Description</p>
+                <textarea id="new_task_description" rows="4" placeholder="Enter Task Description" class="new_task_descInp"></textarea>
+            </div>
+            <div class="add_form_innerdiv">
+                <p>Subtask</p>
+                <div class="all_subtasks_cont">
+                    <!-- all subtasks here -->
+                    
+                </div>
+                <div class="subtask_input_div">
+                    <input type="text" placeholder="Enter subtask name">
+                    <button>+ Add</button>
+                </div>
+            </div>
+            <div class="add_form_innerdiv">
+                <button class="add_new_subtask_btn">+ Add New Subtask</button>
+            </div>
+            <div class="add_form_innerdiv">
+                <p>Current Status</p>
+                <select id="new_task_Status">
+                    <option value="Todo">Todo</option>
+                    <option value="Doing">Doing</option>
+                    <option value="Done">Done</option>
+                </select>
+            </div>
+            <div class="add_form_innerdiv">
+                <button onclick="add_new_task()">Create Task</button>
+            </div>
+           </div>
+        </div>
+
+        <div class="Task_details_popup" >
+            <div>
+                
+            </div>
+        </div>
+
+        <div id="delay_loader"><div class="loader"></div></div>
+
+    </div>
+
+</body>
+<script src="./js/dashboard.js"></script>
+
+</html>
