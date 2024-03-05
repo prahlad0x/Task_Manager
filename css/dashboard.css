@@ -239,7 +239,6 @@ button {
   background: white;
   height: min-content;
   border-radius: 15px;
-  flex: 0 0 20%;
   margin-right: 20px;
   /* min-height:  */
   cursor: pointer;
